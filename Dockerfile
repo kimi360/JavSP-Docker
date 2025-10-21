@@ -12,7 +12,7 @@ RUN pip install pipx && \
     pipx ensurepath && \
     pipx install poetry
 
-RUN git clone --depth 1 https://github.com/Yuukiy/JavSP.git /app && \
+RUN git clone https://github.com/Yuukiy/JavSP.git /app && \
     sed -i 's|https://pypi\.tuna\.tsinghua\.edu\.cn/simple|https://pypi.org/simple|g' poetry.lock
 
 RUN poetry self add poetry-dynamic-versioning && \
