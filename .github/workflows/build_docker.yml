@@ -4,8 +4,6 @@ on:
     - cron: '0 16 * * 1'
   push:
     paths: [ "Dockerfile",".github/workflows/build_docker.yml" ]
-  pull_request:
-    paths: [ "Dockerfile",".github/workflows/build_docker.yml" ]
   workflow_dispatch: ~
 
 jobs:
