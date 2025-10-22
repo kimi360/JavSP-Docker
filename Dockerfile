@@ -4,13 +4,13 @@ ENV PATH="/root/.local/bin:$PATH"
 
 WORKDIR /app
 
-RUN apt update && \
-    apt install -y --no-install-recommends git && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git=1:2.47.3-0+deb13u1 && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install pipx && \
+RUN pip install --no-cache-dir pipx==1.8.0 && \
     pipx ensurepath && \
-    pipx install poetry
+    pipx install poetry==2.2.1
 
 RUN git clone https://github.com/Yuukiy/JavSP.git /app && \
     sed -i 's|https://pypi\.tuna\.tsinghua\.edu\.cn/simple|https://pypi.org/simple|g' poetry.lock
