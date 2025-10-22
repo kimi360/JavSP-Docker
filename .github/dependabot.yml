@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # 检查 GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: ".github/workflows"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 3
+
+  # 检查 Dockerfile
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 3
+    ignore:
+      - dependency-name: "python"
+        versions:
+          - "3.12-slim"
