@@ -51,13 +51,13 @@ services:
 - [Yuukiy/JavSP][javsp]
 
 
-## 协议
-- [MIT][link.license]
+## 许可
+- 此项目以 [GPL-3.0 License][link.license] 发布
 
 [icon.license]:            https://img.shields.io/github/license/kimi360/JavSP-Docker
 [icon.javsp]:              https://img.shields.io/github/v/release/Yuukiy/JavSP?label=JavSP
 [icon.docker.size]:        https://img.shields.io/docker/image-size/kimi360/javsp/latest?color=yellow
-[icon.docker.pull]:        https://img.shields.io/docker/pulls/kimi360/javsp?color=orange
+[icon.docker.pull]:        https://img.shields.io/docker/pulls/kimi360/javsp?color=green
 
 [link.license]:            https://github.com/kimi360/JavSP-Docker/blob/main/LICENSE
 [link.javsp.version]:      https://github.com/Yuukiy/JavSP/releases
