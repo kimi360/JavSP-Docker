@@ -26,8 +26,7 @@ FROM debian:bookworm-slim AS runner
 WORKDIR /app
 
 ENV LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8 \
-    PYTHONIOENCODING=utf-8
+    PYTHONUTF8=1
 
 COPY --from=builder /app/dist /app/
 
